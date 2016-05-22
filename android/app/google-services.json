@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "1045569336307",
+    "firebase_url": "https://bird-alert.firebaseio.com",
+    "project_id": "bird-alert",
+    "storage_bucket": "bird-alert.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045569336307:android:d095e91582844576",
+        "android_client_info": {
+          "package_name": "com.birdalert"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045569336307-9cd3aamhcpi8j3pfrsjfra73ul63sr5v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQkWgsU4jBMxkaOJZ087WFKawComzJZA4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045569336307:android:b5be73b776f6892a",
+        "android_client_info": {
+          "package_name": "com.birddemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045569336307-9cd3aamhcpi8j3pfrsjfra73ul63sr5v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQkWgsU4jBMxkaOJZ087WFKawComzJZA4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
