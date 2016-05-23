@@ -44,9 +44,9 @@ var Demo = React.createClass({
                 longitude: position.coords.longitude,
                 username: username,
             })
-        }).then(() => {
+        }).then((response) => {
             this.state({
-                error: 'Sent',
+                error: response.text(),
             });
         }).catch(e => {
             console.warn(e);
