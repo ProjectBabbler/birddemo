@@ -29,7 +29,10 @@ var Demo = React.createClass({
     },
 
     handlePositionChange(position) {
-        this.setState({position});
+        this.setState({
+            position,
+            error: null,
+        });
         fetch(`${domain}/api/location`, {
             method: 'POST',
             headers: {
@@ -46,6 +49,7 @@ var Demo = React.createClass({
                 error: 'Sent',
             });
         }).catch(e => {
+            console.warn(e);
             this.setState({
                 error: JSON.stringify(e),
             });
