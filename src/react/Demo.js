@@ -12,6 +12,9 @@ import {
   Image,
 } from 'react-native';
 
+let domain = 'https://bird-alert.herokuapp.com';
+let username = 'buskergreg';
+
 var Demo = React.createClass({
     getInitialState() {
         return {
@@ -21,11 +24,32 @@ var Demo = React.createClass({
                     longitude: 'unknown',
                 },
             },
+            error: null,
         };
     },
 
     handlePositionChange(position) {
         this.setState({position});
+        fetch(`${domain}/api/location`, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                latitude: position.coords.latitude,
+                longitude: position.coords.longitude,
+                username: username,
+            })
+        }).then(() => {
+            this.state({
+                error: 'Sent',
+            });
+        }).catch(e => {
+            this.setState({
+                error: JSON.stringify(e),
+            });
+        });
     },
 
     componentDidMount() {
@@ -49,6 +73,9 @@ var Demo = React.createClass({
                 </Text>
                 <Text>
                     Longitude: {this.state.position.coords.latitude}
+                </Text>
+                <Text>
+                    {this.state.error}
                 </Text>
             </View>
         );
