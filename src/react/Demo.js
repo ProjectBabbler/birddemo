@@ -45,8 +45,8 @@ var Demo = React.createClass({
                 username: username,
             })
         }).then((response) => {
-            this.state({
-                error: response.text(),
+            this.setState({
+                error: JSON.stringify(response.text()),
             });
         }).catch(e => {
             console.warn(e);
